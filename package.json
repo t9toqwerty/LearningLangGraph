@@ -1,0 +1,22 @@
+{
+  "name": "langgraph-learn",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "NODE_EXTRA_CA_CERTS=certs/zscaler-ca.pem tsx src/run.ts"
+  },
+  "dependencies": {
+    "@langchain/core": "^1.2.13",
+    "@langchain/google-genai": "^2.3.4",
+    "@langchain/langgraph": "^1.4.18",
+    "dotenv": "^18.0.9",
+    "lodash": "^4.18.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.17.27",
+    "@types/node": "^26.6.5",
+    "tsx": "^4.20.6"
+  }
+}
