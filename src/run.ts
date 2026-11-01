@@ -1,5 +1,8 @@
 import "dotenv/config";
-import { graph } from "./agent/ParallelWorkflow/UPSCEssayWorkflow.js";
+import { graph } from "./agent/ConditionalWorkflow/ReviewReplyWorkflow.js";
+import dotenv from "dotenv";
+
+dotenv.configDotenv();
 
 const essay = `India in the Age of AI As the world enters a transformative era defined by artificial intelligence (AI),
 India stands at a critical juncture — one where it can either emerge as a global leader in AI innovation or risk falling behind in the
@@ -33,7 +36,7 @@ we make today will not just determine India’s AI trajectory, but also its futu
 `;
 
 const result = await graph.invoke({
-  essay: essay
+  review: "I've been trying to log in for over an hour now, and the app keeps freezing on the authentication screen. I even tried reinstalling it, but no luck. This kind of bug is unacceptable, especially when it affects basic functionality."
 });
 
 console.log(result);
